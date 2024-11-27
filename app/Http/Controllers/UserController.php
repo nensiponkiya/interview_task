@@ -42,6 +42,11 @@ class UserController extends Controller
                 'email' => 'Invalid credentials provided.',
             ]);
         }
+        
+    }
+    public function logout(){
+        Auth::logout();
+        return view('login');
     }
 
 }
